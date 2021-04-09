@@ -45,7 +45,7 @@ I strongly advise to use this library with HM-10 bluetooth module, because it is
  - Disable tilt-back at 6km/h
  
 ### Video: Electric Unicycle Interface Example: Led Rainbow and Breaklight
-[![Video](https://img.youtube.com/vi/0SC_-P2epRE/2.jpg)](https://youtu.be/0SC_-P2epRE)  
+[![Video](https://img.youtube.com/vi/0SC_-P2epRE/0.jpg)](https://youtu.be/0SC_-P2epRE)  
 
 ### Usage 
 
