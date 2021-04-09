@@ -7,6 +7,7 @@ Arduino library to interface electric unicycles.
 Comment from Jakub :
 This is a fork of T-vK project. 
 I made adjustments to library and arduino sketch as well due to changes between bluetooth 2.0 and 4.0 BLE that has been made over the years.
+I am using 128x64px display. 
 
 This library allows you to receive and automatically decode the data that EUCs (=Electric Unicycles) send via their Bluetooth interface.  
 It has been tested on several GotWay EUCs.  
@@ -142,6 +143,10 @@ void loop()
 MAIN CODE
 
 ``` C++
+ /* Receive the data the electric unicycle sends 
+ * and print it to an 128x32 pixel OLED display.
+ */
+
 #include <math.h>
 #include <SoftwareSerial.h>
 #include <EucInterface.h>
@@ -153,13 +158,9 @@ MAIN CODE
 Adafruit_SH1106 display(OLED_RESET);
 
 #include <Wire.h>
-//#include <SparkFun_APDS9960.h>
 
-//Bluetooth serial with rx on pin 9 and tx on pin 10
+//Bluetooth serial with rx on pin 4 and tx on pin 5
 SoftwareSerial BluetoothSerial(4, 5);
-// Global Variables
-//SparkFun_APDS9960 apds = SparkFun_APDS9960();
-//int isr_flag = 0;
 
 Euc Euc(BluetoothSerial, BluetoothSerial); // Receive and transmit data via bluetooth
 
