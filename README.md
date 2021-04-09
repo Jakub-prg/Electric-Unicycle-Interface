@@ -58,7 +58,7 @@ HOW TO CONNECT :
 At this point RED light will be blinking roughly 2 times/second...something like that?
 
 - send a sketch to Arduino (with serial write)
------------------------------------
+```
 #include <SoftwareSerial.h>
 SoftwareSerial BTSerial(4, 5); // TX on bluetooth to 4 | RX on bluetooth to 5
 
@@ -82,10 +82,11 @@ void loop()
     Serial.write(BTSerial.read());
     }
 
+//Keep reading when serial is available
 if (Serial.available())
     BTSerial.write(Serial.read());
 }
------------------------------------
+```
 
 - propper baud rate, in my case 9600
 - not the same baud rate for bluetooth and serial monitor
@@ -100,7 +101,7 @@ if (Serial.available())
 - When the device will be connected, RED light will stop blinking. Will be solid red.
 Now send another sketch to capture data :
 
-----------------------------------
+```
 #include <SoftwareSerial.h>
 
 SoftwareSerial BTSerial(4, 5); // TX on bluetooth to 4 | RX on bluetooth to 5
@@ -133,7 +134,7 @@ void loop()
     BTSerial.write(Serial.read());
 }
 
-----------------------------------
+```
 
 
 MAIN CODE
