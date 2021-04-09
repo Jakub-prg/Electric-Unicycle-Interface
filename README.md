@@ -58,7 +58,8 @@ HOW TO CONNECT :
 At this point RED light will be blinking slowly. Couple of times per second.
 
 - send a sketch to Arduino (with serial write)
-```
+- 
+```C++
 #include <SoftwareSerial.h>
 SoftwareSerial BTSerial(4, 5); // TX on bluetooth to 4 | RX on bluetooth to 5
 
@@ -93,15 +94,16 @@ if (Serial.available())
 - AT (should be OK)
  
 - commands to be send :
-	Set up master mode : AT+ROLE1
-	Set mode to Transmittion : AT+MODE0
-	Discovery : AT+DISC?
-	Connect to discovered device : AT+CONN[number]
+- 
+- Set up master mode : AT+ROLE1
+- Set mode to Transmittion : AT+MODE0
+- Discovery : AT+DISC?
+- Connect to discovered device : AT+CONN[number]
 
 - When the device will be connected, RED light will stop blinking. Will be solid red.
 Now send another sketch to capture data :
 
-```
+```C++
 #include <SoftwareSerial.h>
 
 SoftwareSerial BTSerial(4, 5); // TX on bluetooth to 4 | RX on bluetooth to 5
