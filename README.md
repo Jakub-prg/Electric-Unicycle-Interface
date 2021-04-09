@@ -55,7 +55,7 @@ HOW TO CONNECT :
 
 1. Set up bluetooth
 - set up Arduino IDE, connect with Bluetooth HM-10
-At this point RED light will be blinking roughly 2 times/second...something like that?
+At this point RED light will be blinking slowly. Couple of times per second.
 
 - send a sketch to Arduino (with serial write)
 ```
